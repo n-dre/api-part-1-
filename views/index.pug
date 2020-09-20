@@ -1,0 +1,34 @@
+doctype html
+html
+  include partials/head.pug
+
+  body
+      div(class="content")
+      div(class="title") Welcome to Cats life
+      div(class="doc-panels")
+        div(class="sidebar")
+          div(id="get-cats-end-point", class="endpoint newroute")
+            a(onclick="activateEndpoint('get-cats')")
+              span(class="get") GET
+              |  /cats
+          div(id="get-cats-id-end-point", class="endpoint")
+            a(onclick="activateEndpoint('get-cats-id')")
+              span(class="get") GET
+              |  /cats/{id}
+          div(id="post-cats-end-point", class="endpoint")
+            a(onclick="activateEndpoint('post-cats')")
+              span(class="post") POST
+              |  /cats
+          div(id="delete-cats-end-point", class="endpoint")
+            a(onclick="activateEndpoint('delete-cats')")
+              span(class="delete") DELETE
+              |  /cats/{id}
+        div(id="get-cats-doc", class="doc hidden")
+          include partials/docs/getCats.pug
+        div(id="get-cats-id-doc", class="doc hidden")
+          include partials/docs/getCatById.pug
+        div(id="post-cats-doc", class="doc hidden")
+          include partials/docs/postcat.pug
+        div(id="delete-cat-doc", class="doc hidden")
+          include partials/docs/deleteCat.pug
+       
