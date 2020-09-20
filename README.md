@@ -6,7 +6,7 @@ In this part of your project you will be building the front-end for your API sit
 
 #### Get All
 
-**GET** `http://localhost:1337/villains`
+**GET** `http://localhost:1337/cats`
 
 ## Part Two
 
