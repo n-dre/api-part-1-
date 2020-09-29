@@ -12,7 +12,7 @@ const { expect } = chai
 
 describe('Controllers - cats', () => {
   describe('getCats', () => {
-    it('retrieves a list of heroes from the database and calls response.send() with the list', async () => {
+    it('retrieves a list of cats from the database and calls response.send() with the list', async () => {
       const stubbedFindAll = sinon.stub(models.cats, 'findAll').returns(catsList)
       const stubbedSend = sinon.stub()
       const response = { send: stubbedSend }
