@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser')
 const express = require('express')
 const {
-  getCats, getCatById, createCat, deleteCat,
+  getCats, getCatById, saveNewCat, deleteCat,
 } = require('./controllers/api')
 
 const app = express()
@@ -14,7 +14,7 @@ app.get('/', (request, response) => response.render('index'))
 
 app.get('/api/cats', getCats)
 app.get('/api/cats/:breeds', getCatById)
-app.post('/api/cats', createCat)
+app.post('/api/cats', saveNewCat)
 app.delete('/api/cats/:id', deleteCat)
 
 app.all('*', (request, response) => response.sendStatus(404))
