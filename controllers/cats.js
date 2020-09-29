@@ -27,7 +27,7 @@ const getCatById = async (request, response) => {
   }
 }
 
-const createCat = async (request, response) => {
+const saveNewCat = async (request, response) => {
   try {
     const { name, breeds, origin } = request.body
 
@@ -63,6 +63,6 @@ const deleteCat = async (request, response) => {
 module.exports = {
   getCats,
   getCatById,
-  createCat,
+  saveNewCat,
   deleteCat,
 }
